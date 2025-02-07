@@ -45,7 +45,7 @@ export default function About() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-muted-foreground">
-                  App Store'da yer alan başarılı uygulamalarla kullanıcılara değer
+                  App Store&apos;da yer alan başarılı uygulamalarla kullanıcılara değer
                   katmaya devam ediyorum. Cooka, EhliyetBox ve MasalAI projeleriyle
                   binlerce kullanıcıya ulaştım.
                 </p>

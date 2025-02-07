@@ -14,7 +14,7 @@ export default function Home() {
               Mobil Uygulama Geliştirici
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              App Store'da yer alan Cooka, EhliyetBox ve MasalAI projeleriyle
+              App Store&apos;da yer alan Cooka, EhliyetBox ve MasalAI projeleriyle
               kullanıcılara değer katmaya devam ediyorum.
             </p>
           </div>

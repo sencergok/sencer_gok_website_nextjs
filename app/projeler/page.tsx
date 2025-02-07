@@ -107,7 +107,7 @@ export default function Projects() {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          App Store'da Görüntüle
+                          App Store&apos;da Görüntüle
                         </a>
                       </Button>
                     </CardFooter>
