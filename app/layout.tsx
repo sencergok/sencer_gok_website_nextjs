@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     default: "Sencer Gök | iOS Geliştirici & Mobil Uygulama Uzmanı",
     template: "%s | Sencer Gök"
   },
-  description: "Sencer Gök - iOS ve Mobil Uygulama Geliştirici. App Store'da yer alan başarılı projeleriyle kullanıcılara değer katan yazılım mühendisi.",
+  description: "Sencer Gök - iOS ve Mobil Uygulama Geliştirici. App Store&apos;da yer alan başarılı projeleriyle kullanıcılara değer katan yazılım mühendisi.",
   keywords: [
     "Sencer Gök",
     "iOS Geliştirici",

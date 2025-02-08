@@ -6,7 +6,7 @@ import type { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Sencer Gök | iOS Geliştirici & Mobil Uygulama Uzmanı",
-  description: "iOS ve Mobil Uygulama Geliştirici Sencer Gök. App Store'da yer alan Cooka, EhliyetBox ve MasalAI projeleriyle kullanıcılara değer katıyor.",
+  description: "iOS ve Mobil Uygulama Geliştirici Sencer Gök. App Store&apos;da yer alan Cooka, EhliyetBox ve MasalAI projeleriyle kullanıcılara değer katıyor.",
   keywords: [
     "Sencer Gök",
     "iOS Geliştirici",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "Sencer Gök | iOS ve Mobil Uygulama Geliştirici",
-    description: "App Store'da yer alan başarılı projeleriyle öne çıkan iOS ve mobil uygulama geliştirici Sencer Gök'ün portfolyo sitesi.",
+    description: "App Store&apos;da yer alan başarılı projeleriyle öne çıkan iOS ve mobil uygulama geliştirici Sencer Gök&apos;ün portfolyo sitesi.",
   }
 }
 
