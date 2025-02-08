@@ -38,7 +38,7 @@ const projects = [
     description: "Ehliyet sınavına hazırlık uygulaması",
     content: "Binlerce soru ve detaylı konu anlatımlarıyla ehliyet sınavına hazırlık sürecini kolaylaştırır.",
     image: "/images/ehliyetbox.png",
-    appStoreLink: "https://apps.apple.com/us/app/ehliyetbox-ehliyet-s%C4%B1nav-soru/id6740466156"
+    appStoreLink: "https://apps.apple.com/us/app/ehliyetbox-ehliyet-sınav-soru/id6740466156"
   },
   {
     id: 3,
@@ -83,7 +83,7 @@ export default function Home() {
                 </h1>
                 <p className="text-xl md:text-xl text-muted-foreground leading-relaxed">
                   Merhaba! Ben Sencer. Kullanıcı deneyimini ön planda tutan, yenilikçi mobil uygulamalar geliştiriyorum. 
-                  Yapay zeka teknolojilerini kullanarak App Store'da yer alan projelerimle kullanıcılara değer katmaya devam ediyorum.
+                  Yapay zeka teknolojilerini kullanarak App Store&apos;da yer alan projelerimle kullanıcılara değer katmaya devam ediyorum.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                   <Button asChild size="lg" className="text-lg bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700">

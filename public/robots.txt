@@ -1,0 +1,6 @@
+# https://sencergok.com robots.txt
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://sencergok.com/sitemap.xml 
