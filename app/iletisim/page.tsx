@@ -1,4 +1,3 @@
-import { Navbar } from "@/components/Navbar"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -7,7 +6,7 @@ import { Textarea } from "@/components/ui/textarea"
 const socialLinks = [
   {
     name: "LinkedIn",
-    url: "#",
+    url: "https://www.linkedin.com/in/sencergok/",
     icon: (
       <svg
         className="h-6 w-6"
@@ -21,7 +20,7 @@ const socialLinks = [
   },
   {
     name: "Twitter",
-    url: "#",
+    url: "https://x.com/sencerdev",
     icon: (
       <svg
         className="h-6 w-6"
@@ -35,7 +34,7 @@ const socialLinks = [
   },
   {
     name: "GitHub",
-    url: "#",
+    url: "https://github.com/sencergok",
     icon: (
       <svg
         className="h-6 w-6"
@@ -56,21 +55,29 @@ const socialLinks = [
 export default function Contact() {
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
-      <main className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold mb-4">İletişime Geç</h1>
-            <p className="text-xl text-muted-foreground">
+      <main className="container mx-auto px-4 py-8">
+        {/* Header Section */}
+        <section className="relative rounded-3xl overflow-hidden mb-16 py-20 bg-gradient-to-r from-purple-900 to-blue-900">
+          <div className="absolute inset-0 bg-grid-white/10" />
+          <div className="relative max-w-4xl mx-auto text-center px-4">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+              <span className="bg-gradient-to-r from-purple-300 to-blue-300 text-transparent bg-clip-text">
+                İletişime Geç
+              </span>
+            </h1>
+            <p className="text-xl text-gray-100 max-w-2xl mx-auto">
               Projeleriniz veya işbirliği fırsatları için benimle iletişime geçebilirsiniz.
+              Size en kısa sürede dönüş yapacağım.
             </p>
           </div>
+        </section>
 
+        <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8">
-            <Card>
+            <Card className="group hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-purple-500/20">
               <CardHeader>
-                <CardTitle>İletişim Formu</CardTitle>
-                <CardDescription>
+                <CardTitle className="text-2xl group-hover:text-purple-600 transition-colors">İletişim Formu</CardTitle>
+                <CardDescription className="text-lg">
                   Size en kısa sürede dönüş yapacağım.
                 </CardDescription>
               </CardHeader>
@@ -86,6 +93,7 @@ export default function Contact() {
                     <Input
                       id="name"
                       placeholder="Adınız ve soyadınız"
+                      className="border-purple-500/20 focus:border-purple-500"
                     />
                   </div>
 
@@ -100,6 +108,7 @@ export default function Contact() {
                       id="email"
                       type="email"
                       placeholder="ornek@email.com"
+                      className="border-purple-500/20 focus:border-purple-500"
                     />
                   </div>
 
@@ -114,19 +123,22 @@ export default function Contact() {
                       id="message"
                       placeholder="Mesajınızı buraya yazın..."
                       rows={6}
+                      className="border-purple-500/20 focus:border-purple-500"
                     />
                   </div>
 
-                  <Button className="w-full">Gönder</Button>
+                  <Button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700">
+                    Gönder
+                  </Button>
                 </form>
               </CardContent>
             </Card>
 
             <div className="space-y-8">
-              <Card>
+              <Card className="group hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-purple-500/20">
                 <CardHeader>
-                  <CardTitle>Sosyal Medya</CardTitle>
-                  <CardDescription>
+                  <CardTitle className="text-2xl group-hover:text-purple-600 transition-colors">Sosyal Medya</CardTitle>
+                  <CardDescription className="text-lg">
                     Sosyal medya hesaplarımdan beni takip edebilirsiniz.
                   </CardDescription>
                 </CardHeader>
@@ -138,9 +150,9 @@ export default function Contact() {
                         href={link.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex flex-col items-center gap-2 p-4 rounded-lg hover:bg-accent transition-colors"
+                        className="flex flex-col items-center gap-2 p-4 rounded-lg hover:bg-purple-500/10 transition-colors group/link"
                       >
-                        <span className="text-muted-foreground hover:text-primary">
+                        <span className="text-muted-foreground group-hover/link:text-purple-600">
                           {link.icon}
                         </span>
                         <span className="text-sm font-medium">{link.name}</span>
@@ -150,17 +162,17 @@ export default function Contact() {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="group hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-purple-500/20">
                 <CardHeader>
-                  <CardTitle>İletişim Bilgileri</CardTitle>
-                  <CardDescription>
+                  <CardTitle className="text-2xl group-hover:text-purple-600 transition-colors">İletişim Bilgileri</CardTitle>
+                  <CardDescription className="text-lg">
                     Doğrudan iletişim için aşağıdaki bilgileri kullanabilirsiniz.
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <div className="flex items-center gap-2 text-muted-foreground">
+                  <div className="flex items-center gap-2 text-muted-foreground group-hover:text-purple-600/80">
                     <svg
-                      className="h-5 w-5"
+                      className="h-5 w-5 text-purple-500"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -172,11 +184,11 @@ export default function Contact() {
                         d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                       />
                     </svg>
-                    <span>info@sencergok.com</span>
+                    <span>sencergok@outlook.com</span>
                   </div>
-                  <div className="flex items-center gap-2 text-muted-foreground">
+                  <div className="flex items-center gap-2 text-muted-foreground group-hover:text-purple-600/80">
                     <svg
-                      className="h-5 w-5"
+                      className="h-5 w-5 text-purple-500"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -188,7 +200,7 @@ export default function Contact() {
                         d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                       />
                     </svg>
-                    <span>+90 (555) 123 45 67</span>
+                    <span>+90 (545) 810 74 60</span>
                   </div>
                 </CardContent>
               </Card>
