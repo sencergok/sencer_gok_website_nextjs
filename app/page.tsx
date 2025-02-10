@@ -5,21 +5,49 @@ import Image from "next/image"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Sencer Gök | iOS Geliştirici & Mobil Uygulama Uzmanı",
-  description: "iOS ve Mobil Uygulama Geliştirici Sencer Gök. App Store&apos;da yer alan Cooka, EhliyetBox ve MasalAI projeleriyle kullanıcılara değer katıyor.",
+  metadataBase: new URL('https://sencergok.com'),
+  title: {
+    default: "Sencer Gök | iOS Geliştirici & Mobil Uygulama Uzmanı",
+    template: "%s | Sencer Gök"
+  },
+  description: "iOS ve Mobil Uygulama Geliştirici Sencer Gök. App Store'da başarılı projeleriyle kullanıcılara değer katan, yapay zeka destekli mobil uygulamalar geliştiren yazılım mühendisi.",
   keywords: [
     "Sencer Gök",
     "iOS Geliştirici",
     "Mobil Uygulama Geliştirici",
-    "Cooka App",
-    "EhliyetBox",
-    "MasalAI",
+    "Swift Uzmanı",
     "iOS Developer İstanbul",
-    "Türk App Store Geliştirici"
+    "App Store Geliştirici",
+    "Türk iOS Geliştirici",
+    "Yapay Zeka Uygulamaları",
+    "MasalAI Geliştiricisi",
+    "Cooka App Geliştiricisi"
   ],
   openGraph: {
-    title: "Sencer Gök | iOS ve Mobil Uygulama Geliştirici",
-    description: "App Store&apos;da yer alan başarılı projeleriyle öne çıkan iOS ve mobil uygulama geliştirici Sencer Gök&apos;ün portfolyo sitesi.",
+    type: 'website',
+    locale: 'tr_TR',
+    url: 'https://sencergok.com',
+    title: 'Sencer Gök | iOS Geliştirici & Mobil Uygulama Uzmanı',
+    description: 'iOS ve Mobil Uygulama Geliştirici Sencer Gök. Yapay zeka destekli uygulamalar ve yenilikçi çözümler.',
+    siteName: 'Sencer Gök',
+    images: [
+      {
+        url: '/images/profile.webp',
+        width: 800,
+        height: 800,
+        alt: 'Sencer Gök - iOS Geliştirici',
+      }
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Sencer Gök | iOS Geliştirici',
+    description: 'iOS ve Mobil Uygulama Geliştirici Sencer Gök. App Store projeleri ve yazılım çözümleri.',
+    creator: '@sencerdev',
+    images: ['/images/profile.webp'],
+  },
+  alternates: {
+    canonical: 'https://sencergok.site',
   }
 }
 
@@ -55,7 +83,10 @@ export default function Home() {
     <div className="min-h-screen bg-background">
       <main className="container mx-auto px-4">
         {/* Hero Section */}
-        <section className="min-h-[75vh] flex items-center justify-center py-8 md:py-8">
+        <section 
+          className="min-h-[75vh] flex items-center justify-center py-8 md:py-8"
+          aria-label="Tanıtım"
+        >
           <div className="w-full max-w-7xl mx-auto">
             <div className="flex flex-col md:grid md:grid-cols-12 gap-6 md:gap-8 items-center">
               {/* Sol Taraf - Profil Resmi */}
@@ -65,17 +96,18 @@ export default function Home() {
                   <div className="relative h-full rounded-full overflow-hidden ring-4 ring-purple-500/20 shadow-2xl">
                     <Image
                       src="/images/profile.webp"
-                      alt="Sencer Gök"
+                      alt="Sencer Gök - iOS Geliştirici Profil Fotoğrafı"
                       fill
                       className="object-cover"
                       priority
+                      sizes="(max-width: 768px) 256px, 400px"
                     />
                   </div>
                 </div>
               </div>
 
               {/* Sağ Taraf - Metin Alanı */}
-              <div className="w-full md:col-span-7 space-y-6 text-center md:text-left mt-4">
+              <div role="contentinfo" className="w-full md:col-span-7 space-y-6 text-center md:text-left mt-4">
                 <h1 className="text-2xl md:text-6xl lg:text-16xl font-bold tracking-tight">
                   <span className="bg-gradient-to-r from-purple-400 via-purple-300 to-blue-400 text-transparent bg-clip-text">
                     Mobil Uygulama Geliştirici
