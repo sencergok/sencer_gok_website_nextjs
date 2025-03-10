@@ -106,11 +106,12 @@ export default async function BlogPage() {
                   >
                     <div className="relative h-60 md:h-auto md:w-1/3 overflow-hidden">
                       <Image
-                        src={post.image_url || "/placeholder.svg?height=400&width=600"}
+                        src={post.image_url || "/blog/placeholder-post.jpg"}
                         alt={post.title}
                         fill
                         className="object-cover transition-transform duration-700 hover:scale-110"
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        priority={blogPosts.indexOf(post) < 2} // İlk 2 görseli öncelikli yükle
                       />
                     </div>
                     <div className="p-6 flex-1 flex flex-col md:w-2/3">
