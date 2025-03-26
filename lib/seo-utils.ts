@@ -10,13 +10,31 @@ export const generateStructuredData = (type = "Person") => {
       "@context": "https://schema.org",
       "@type": "Person",
       name: "Sencer Gök",
+      givenName: "Sencer",
+      familyName: "Gök",
       url: "https://sencergok.site",
+      image: "https://sencergok.site/profile-image.jpg",
       jobTitle: "Fullstack & Mobil Geliştirici",
-      sameAs: ["https://github.com/sencergok", "https://linkedin.com/in/sencergok", "https://twitter.com/sencerdev"],
-      knowsAbout: ["Next.js", "React", "Supabase", "SwiftUI", "JavaScript", "TypeScript", "Node.js"],
+      sameAs: [
+        "https://github.com/sencergok", 
+        "https://linkedin.com/in/sencergok", 
+        "https://twitter.com/sencerdev"
+      ],
+      knowsAbout: [
+        "Next.js", 
+        "React", 
+        "Supabase", 
+        "SwiftUI", 
+        "JavaScript", 
+        "TypeScript", 
+        "Node.js", 
+        "Web Geliştirme", 
+        "Mobil Uygulama Geliştirme"
+      ],
       address: {
         "@type": "PostalAddress",
         addressLocality: "Ankara",
+        addressRegion: "Ankara",
         addressCountry: "TR",
       },
       alumniOf: {
@@ -36,9 +54,31 @@ export const generateStructuredData = (type = "Person") => {
       worksFor: {
         "@type": "Organization",
         name: "Freelance Yazılım Geliştirici",
+        description: "Ankara merkezli profesyonel yazılım geliştirme hizmetleri",
+        url: "https://sencergok.site"
       },
       description:
-        "Sencer Gök, Ankara'da modern web ve mobil uygulamalar geliştiren fullstack yazılım geliştiricisi. Next.js, React, Supabase ve SwiftUI uzmanı.",
+        "Sencer Gök, Ankara'da modern web ve mobil uygulamalar geliştiren deneyimli fullstack yazılım geliştiricisi. Next.js, React, Supabase ve SwiftUI uzmanı olarak profesyonel çözümler sunuyorum.",
+      makesOffer: {
+        "@type": "Offer",
+        itemOffered: [
+          {
+            "@type": "Service",
+            name: "Web Uygulama Geliştirme",
+            description: "Modern ve performanslı web uygulamaları geliştirme hizmeti"
+          },
+          {
+            "@type": "Service",
+            name: "Mobil Uygulama Geliştirme",
+            description: "iOS için natif mobil uygulamalar geliştirme hizmeti"
+          },
+          {
+            "@type": "Service",
+            name: "Fullstack Yazılım Geliştirme",
+            description: "Uçtan uca yazılım çözümleri geliştirme hizmeti"
+          }
+        ]
+      }
     }
   } else if (type === "BlogPosting") {
     // Bu fonksiyon blog yazıları için çağrıldığında kullanılacak
@@ -52,26 +92,50 @@ export const generateStructuredData = (type = "Person") => {
       "@context": "https://schema.org",
       "@type": "WebSite",
       url: "https://sencergok.site",
-      name: "Sencer Gök | Fullstack & Mobil Geliştirici",
-      description: "Sencer Gök, Ankara'da modern web ve mobil uygulamalar geliştiren fullstack yazılım geliştiricisi.",
+      name: "Sencer Gök | Ankara'nın Öncü Fullstack & Mobil Geliştiricisi",
+      description: "Sencer Gök, Ankara'da modern web ve mobil uygulamalar geliştiren deneyimli fullstack yazılım geliştiricisi.",
       author: {
         "@type": "Person",
         name: "Sencer Gök",
+        url: "https://sencergok.site"
+      },
+      publisher: {
+        "@type": "Person",
+        name: "Sencer Gök",
+        url: "https://sencergok.site"
       },
       potentialAction: {
         "@type": "SearchAction",
         target: "https://sencergok.site/blog?q={search_term_string}",
         "query-input": "required name=search_term_string",
       },
+      inLanguage: "tr-TR",
+      copyrightYear: new Date().getFullYear(),
+      mainEntity: {
+        "@type": "WebPage",
+        "@id": "https://sencergok.site/#webpage",
+        url: "https://sencergok.site",
+        name: "Sencer Gök | Ankara'nın Öncü Fullstack & Mobil Geliştiricisi",
+        description: "Sencer Gök, Ankara'da modern web ve mobil uygulamalar geliştiren deneyimli fullstack yazılım geliştiricisi."
+      }
     }
   }
 }
 
 export const generateSeoKeywords = () => {
   return [
-    // Kişisel bilgiler
+    // Kişisel bilgiler - varyasyonlar ve öne çıkan anahtar kelimeler en başa
     "Sencer Gök",
     "sencer gök",
+    "Ankara Sencer Gök",
+    "Ankara fullstack geliştirici Sencer Gök",
+    "Sencer Gök yazılım",
+    "sencer gök yazılımcı",
+    "sencer gök developer",
+    "sencer gök Ankara",
+    "sencer gök web developer",
+    "sencer gök mobil geliştirici",
+    "sencer gök fullstack",
     "sencer",
     "sencergok",
     "sencergokk",
@@ -90,15 +154,23 @@ export const generateSeoKeywords = () => {
     "sencer react",
     "sencer nextjs",
 
-    // Eğitim ve konum
+    // Eğitim ve konum - işverenler için önemli anahtar kelimeler
     "Başkent Üniversitesi yazılım geliştirici",
     "Başkent Üniversitesi YBS",
     "Yönetim Bilişim Sistemleri öğrencisi",
     "Ankara yazılım geliştirici",
     "Ankara fullstack developer",
     "Ankara mobil uygulama geliştirici",
+    "Ankara web developer",
+    "Ankara en iyi yazılımcı",
+    "Ankara profesyonel web geliştirici",
+    "Ankara SEO dostu web geliştirici",
+    "Ankara iOS geliştirici",
+    "Ankara freelance yazılımcı",
+    "Ankara frontend geliştirici",
+    "Ankara backend geliştirici",
 
-    // Uzmanlık alanları
+    // Uzmanlık alanları - teknik kelimeler
     "fullstack geliştirici",
     "mobil geliştirici",
     "Next.js uzmanı",
@@ -116,8 +188,11 @@ export const generateSeoKeywords = () => {
     "Ankara fullstack geliştirici",
     "Ankara iOS geliştirici",
     "Türkiye yazılım geliştirici",
+    "SEO optimizasyonu",
+    "responsive web tasarımı",
+    "Türkçe SEO uzmanı",
 
-    // Hizmetler ve yetenekler
+    // Hizmetler ve yetenekler - müşterilere yönelik kelimeler
     "freelance yazılım geliştirici",
     "react native uzmanı",
     "typescript geliştirici",
@@ -138,8 +213,10 @@ export const generateSeoKeywords = () => {
     "performanslı web uygulamaları",
     "ölçeklenebilir yazılım çözümleri",
     "türkçe yazılım geliştirici",
+    "Ankara web site yaptırma",
+    "Ankara mobil uygulama yaptırma",
 
-    // Yeni eklenen anahtar kelimeler
+    // Müşteri hizmetleri ve iş fırsatları
     "2002 doğumlu yazılım geliştirici",
     "genç yazılım geliştirici",
     "öğrenci yazılım geliştirici",
@@ -161,6 +238,12 @@ export const generateSeoKeywords = () => {
     "teknoloji blog",
     "yazılım eğitimi",
     "yazılım ipuçları",
+    "uygun fiyatlı web sitesi",
+    "profesyonel web çözümleri",
+    "güvenilir yazılımcı Ankara",
+    "en iyi mobil uygulama geliştiricisi Ankara",
+    "Ankara web site fiyatları",
+    "Ankara yazılım danışmanı",
   ]
 }
 

@@ -6,14 +6,13 @@ import Header from "@/components/layout/header"
 import { ThemeProvider } from "@/components/theme-provider"
 import Script from "next/script"
 import { generateSeoKeywords, generateStructuredData } from "@/lib/seo-utils"
-
 const inter = Inter({ subsets: ["latin"] })
 
 // SEO için meta verileri genişletelim
 export const metadata: Metadata = {
-  title: "Sencer Gök | Fullstack & Mobil Geliştirici | Next.js, React, Supabase, SwiftUI Uzmanı",
+  title: "Sencer Gök",
   description:
-    "Sencer Gök, Ankara'da modern web ve mobil uygulamalar geliştiren fullstack yazılım geliştiricisi. Next.js, React, Supabase ve SwiftUI ile kullanıcı dostu, performanslı ve ölçeklenebilir çözümler.",
+    "Sencer Gök, Ankara'da modern web ve mobil uygulamalar geliştiren deneyimli fullstack yazılım geliştiricisi. Next.js, React, Supabase ve SwiftUI ile kullanıcı dostu, yüksek performanslı ve ölçeklenebilir yazılım çözümleri sunuyorum. Profesyonel projeler için hemen iletişime geçin.",
   keywords: generateSeoKeywords(),
   authors: [{ name: "Sencer Gök", url: "https://sencergok.site" }],
   creator: "Sencer Gök",
@@ -21,6 +20,7 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    nocache: false,
     googleBot: {
       index: true,
       follow: true,
@@ -38,25 +38,25 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://sencergok.site",
-    title: "Sencer Gök | Fullstack & Mobil Geliştirici",
+    title: "Sencer Gök | Ankara'nın Öncü Fullstack & Mobil Geliştiricisi",
     description:
-      "Next.js, React, Supabase ve SwiftUI ile modern, performanslı ve kullanıcı dostu uygulamalar geliştiriyorum.",
+      "Next.js, React, Supabase ve SwiftUI ile modern, performanslı ve kullanıcı dostu web ve mobil uygulamalar geliştiriyorum. Ankara'da profesyonel yazılım hizmetleri.",
     siteName: "Sencer Gök Portfolio",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Sencer Gök - Fullstack & Mobil Geliştirici",
+        alt: "Sencer Gök - Ankara'nın Öncü Fullstack & Mobil Geliştiricisi",
       },
     ],
     locale: "tr_TR",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sencer Gök | Fullstack & Mobil Geliştirici",
+    title: "Sencer Gök | Ankara'nın Öncü Fullstack & Mobil Geliştiricisi",
     description:
-      "Next.js, React, Supabase ve SwiftUI ile modern, performanslı ve kullanıcı dostu uygulamalar geliştiriyorum.",
+      "Next.js, React, Supabase ve SwiftUI ile modern, performanslı ve kullanıcı dostu web ve mobil uygulamalar geliştiriyorum. Ankara'da profesyonel yazılım hizmetleri.",
     images: ["/og-image.jpg"],
     creator: "@sencerdev",
     site: "@sencerdev",
@@ -72,9 +72,8 @@ export const metadata: Metadata = {
   ],
   category: "Portfolio",
   verification: {
-    google: "google-site-verification-code", // Google Search Console doğrulama kodu
-    yandex: "yandex-verification-code", // Yandex Webmaster doğrulama kodu
-    bing: "bing-verification-code", // Bing Webmaster doğrulama kodu
+    google: "GOOGLE-SITE-VERIFICATION-CODE-EKLE", // Google Search Console doğrulama kodunu buraya eklemelisiniz
+    yandex: "yandex-verification-code",
   },
   applicationName: "Sencer Gök Portfolio",
   formatDetection: {
@@ -84,7 +83,7 @@ export const metadata: Metadata = {
     email: true,
     url: true,
   },
-    generator: 'v0.dev'
+  metadataBase: new URL("https://sencergok.site")
 }
 
 export default function RootLayout({
@@ -114,6 +113,14 @@ export default function RootLayout({
         {/* Alternatif Diller */}
         <link rel="alternate" hrefLang="tr" href="https://sencergok.site" />
         <link rel="alternate" hrefLang="x-default" href="https://sencergok.site" />
+        {/* Mobil Uyumluluk */}
+        <meta name="HandheldFriendly" content="true" />
+        {/* Sosyal Medya */}
+        <meta property="og:site_name" content="Sencer Gök Portfolio" />
+        {/* Rich Results için ek yapısal veriler */}
+        <meta name="author" content="Sencer Gök" />
+        <meta name="geo.placename" content="Ankara" />
+        <meta name="geo.region" content="TR" />
       </head>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
@@ -130,24 +137,24 @@ export default function RootLayout({
           {JSON.stringify(generateStructuredData("WebSite"))}
         </Script>
 
-        {/* Google Analytics */}
+        {/* Google Analytics - Güncellenmiş GA4 kodu */}
         <Script id="google-analytics" strategy="afterInteractive">
           {`
-            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-XXXXXXX');
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-XXXXXXXXXX'); // Google Analytics GA4 ölçüm kimliğinizi buraya ekleyin
           `}
         </Script>
 
-        {/* Google Search Console Doğrulama */}
+        {/* Google Search Console Doğrulama ve Search Box Schema */}
         <Script id="google-search-console" type="application/ld+json">
           {`
             {
               "@context": "https://schema.org",
               "@type": "WebSite",
               "url": "https://sencergok.site/",
+              "name": "Sencer Gök",
               "potentialAction": {
                 "@type": "SearchAction",
                 "target": "https://sencergok.site/search?q={search_term_string}",
